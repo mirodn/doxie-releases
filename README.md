@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="https://mirodn.github.io/doxie-releases/assets/img/icon.png" alt="doxie app icon" width="128" height="128">
-
 # doxie
 
 **Quick notes, fetched by a dachshund.**
