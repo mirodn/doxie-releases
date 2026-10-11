@@ -1,13 +1,13 @@
 <div align="center">
 
-# doxie
+# doxie (beta)
 
 **Quick notes, fetched by a dachshund.**
 
 A tiny, local-first note-taking app that lives in your Mac's menu bar.<br>
 Press <kbd>⌥</kbd> <kbd>Space</kbd>, type, press <kbd>⌘</kbd> <kbd>↩</kbd>. Done.
 
-[![Latest release](https://img.shields.io/github/v/release/mirodn/doxie-releases?label=release&color=8B5A2B)](https://github.com/mirodn/doxie-releases/releases/latest)
+[![Latest release](https://img.shields.io/github/v/release/mirodn/doxie-releases?include_prereleases&label=release&color=8B5A2B)](https://github.com/mirodn/doxie-releases/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/mirodn/doxie-releases/total?color=8B5A2B)](https://github.com/mirodn/doxie-releases/releases)
 ![macOS 14+](https://img.shields.io/badge/macOS-14%2B-000000?logo=apple&logoColor=white)
 ![Apple silicon & Intel](https://img.shields.io/badge/Apple%20silicon%20%26%20Intel-universal-555555)
