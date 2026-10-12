@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>doxie: quick notes, fetched by a dachshund</title>
+  <meta name="description" content="doxie is a tiny Mac menu bar app for quick notes. Press a shortcut, type, done. Local-first, with Markdown, Obsidian and Notion export.">
+  <meta property="og:title" content="doxie: quick notes, fetched by a dachshund">
+  <meta property="og:description" content="A tiny Mac menu bar app for quick notes. Every note becomes a little dog in your park.">
+  <meta property="og:image" content="assets/img/capture.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/icon.png">
+  <link rel="stylesheet" href="style.css?v=8">
+  <script src="config.js?v=5"></script>
+  <script src="sprites.js?v=4"></script>
+  <script src="site.js?v=6" defer></script>
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top"><img src="assets/img/icon.png" alt="" width="32" height="32">doxie</a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#pro">Pro</a>
+      <a href="#faq">FAQ</a>
+      <a href="docs.html">Docs</a>
+      <a class="button small" href="download.html">Download</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Quick notes,<br>fetched by a dachshund.</h1>
+        <p class="lead">doxie lives in your Mac's menu bar. Press <kbd>⌥</kbd><kbd>Space</kbd>, type, and the dachshund stretches to fit your note. Press <kbd>⌘</kbd><kbd>S</kbd> and it's saved. Everything stays on your Mac.</p>
+        <div class="actions" id="download">
+          <a class="button" href="download.html">Download for Mac</a>
+          <a class="button secondary" href="#pro">See Doxie Pro</a>
+        </div>
+        <p class="fineprint">Free · macOS 14 or later · Apple silicon and Intel</p>
+      </div>
+      <figure class="capture">
+        <img src="assets/img/capture.png" alt="The doxie capture window: a pixel dachshund whose long body holds the note you're typing" width="520">
+      </figure>
+    </section>
+
+    <section class="park-section">
+      <h2>Every note is a dog in your park</h2>
+      <p class="section-lead">Open the inbox and your ten newest notes play in a pixel park. They trot around the pond, gallop, sniff, dig and doze off, each wearing the look its note was written with. Hover one to see its note, click it to open it. <span class="hint">Try it: hover the dogs.</span></p>
+      <div class="park-frame">
+        <div class="park" id="park" role="img" aria-label="A pixel park with dachshunds playing">
+          <div class="park-bubble" id="park-bubble" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section">
+      <h2>Your notes, calm and close</h2>
+      <p class="section-lead">Below the park, your notes are a quiet list: each one with its own little dog, its tags and when you wrote it. Filter by Pinned, Archive or any #tag, and click a note to edit it.</p>
+      <picture class="screenshot">
+        <source srcset="assets/img/dashboard-dark.png?v=2" media="(prefers-color-scheme: dark)">
+        <img src="assets/img/dashboard-light.png?v=2" alt="The doxie home page: the dog park on top, a list of notes below, each with a small dachshund" width="1440" height="1197" loading="lazy">
+      </picture>
+    </section>
+
+    <section id="features" class="features">
+      <h2>Small app, quick paws</h2>
+      <div class="grid">
+        <article>
+          <h3>One shortcut away</h3>
+          <p><kbd>⌥</kbd><kbd>Space</kbd> from any app. Your draft survives <kbd>Esc</kbd>, clicking away and even quitting.</p>
+        </article>
+        <article>
+          <h3>#tags and search</h3>
+          <p>Type <code>#ideas</code> anywhere in a note. Filter by tag, or press <kbd>⌥</kbd><kbd>⇧</kbd><kbd>Space</kbd> to find any note in a second.</p>
+        </article>
+        <article>
+          <h3>Clipboard to inbox</h3>
+          <p>Save whatever you just copied as a note, with its own shortcut. Nothing even opens.</p>
+        </article>
+        <article>
+          <h3>Markdown and Obsidian</h3>
+          <p>Notes are written as plain Markdown files, straight into your Obsidian vault. Edits you make there are never overwritten.</p>
+        </article>
+        <article>
+          <h3>Notion <span class="tag">Pro</span></h3>
+          <p>Each note becomes a page in your Notion database, with its tags and date. Offline notes catch up later.</p>
+        </article>
+        <article>
+          <h3>All your Macs <span class="tag">Pro</span></h3>
+          <p>Notes sync through iCloud Drive. If two Macs change the same note, both versions are kept.</p>
+        </article>
+        <article>
+          <h3>Capture actions <span class="tag">Pro</span></h3>
+          <p>Start with <code>/todo</code>, <code>/pin</code> or <code>/append</code> to make a checklist, pin the note or add to your last one.</p>
+        </article>
+        <article>
+          <h3>Local-first</h3>
+          <p>Notes are stored in a SQLite database on your Mac. No account, no cloud, no tracking.</p>
+        </article>
+        <article>
+          <h3>Reminders</h3>
+          <p>Type <code>/remind tomorrow 9:00</code> in front of a note. When it's time, you get a notification and the note's dog rings a little bell.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="pro" class="pro">
+      <h2>Doxie Pro</h2>
+      <p class="section-lead">doxie is free to use, with unlimited notes. Pro adds integrations and a wardrobe for your dachshund. Pay once, keep it.</p>
+      <div class="pro-layout">
+        <table class="compare">
+          <thead><tr><th></th><th>Free</th><th>Pro</th></tr></thead>
+          <tbody>
+            <tr><td>Unlimited local notes</td><td>✓</td><td>✓</td></tr>
+            <tr><td>Global shortcut, quick search, tags</td><td>✓</td><td>✓</td></tr>
+            <tr><td>Markdown / Obsidian export folders, with tag filters in Pro</td><td>1</td><td>Many</td></tr>
+            <tr><td>Notion sync</td><td></td><td>✓</td></tr>
+            <tr><td>Reminders with notifications</td><td>✓</td><td>✓</td></tr>
+            <tr><td>Repeating reminders: every day, weekday, week or month</td><td></td><td>✓</td></tr>
+            <tr><td>Capture actions: <code>/todo</code>, <code>/pin</code>, <code>/append</code></td><td></td><td>✓</td></tr>
+            <tr><td>Sync between your Macs (iCloud Drive)</td><td></td><td>✓</td></tr>
+            <tr><td>Coats and accessories: party hat, glasses, scarf, bow tie, cowboy hat &amp; boots</td><td></td><td>✓</td></tr>
+            <tr><td>Park themes: Autumn, Snow, Night</td><td></td><td>✓</td></tr>
+          </tbody>
+        </table>
+        <div class="pro-card">
+          <img src="assets/img/capture-cowboy.png" alt="The doxie dachshund in a cowboy hat and boots" width="300">
+          <p class="price" id="pro-price" hidden></p>
+          <a class="button" id="buy" data-buy href="#">Get Doxie Pro</a>
+          <p class="fineprint">One-time purchase for up to 3 Macs, no subscription. Payment and licensing by Lemon Squeezy; your license key unlocks Pro in doxie's settings.</p>
+        </div>
+      </div>
+      <div class="themes">
+        <figure><img src="assets/img/park-autumn.png?v=2" alt="Autumn park theme" class="pixel"><figcaption>Autumn</figcaption></figure>
+        <figure><img src="assets/img/park-snow.png?v=2" alt="Snow park theme" class="pixel"><figcaption>Snow</figcaption></figure>
+        <figure><img src="assets/img/park-night.png?v=2" alt="Night park theme" class="pixel"><figcaption>Night</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <h2>Questions</h2>
+      <details>
+        <summary>Where are my notes stored?</summary>
+        <p>On your Mac, in a SQLite database in your Library folder. doxie has no servers and no account. If you turn on export or sync, notes are written to the folders or the Notion workspace you choose.</p>
+      </details>
+      <details>
+        <summary>Does it work offline?</summary>
+        <p>Yes. Capturing, searching and exporting to folders all work offline. Notion sync catches up when you're back online.</p>
+      </details>
+      <details>
+        <summary>Is Doxie Pro a subscription?</summary>
+        <p>No. You pay once and keep Pro, including all 1.x updates. Your notes always stay yours, with or without Pro.</p>
+      </details>
+      <details>
+        <summary>Can I use my license on more than one Mac?</summary>
+        <p>Yes, on up to 3 Macs. To move it to another Mac, choose <em>Deactivate on This Mac</em> in doxie's settings.</p>
+      </details>
+      <details>
+        <summary>How do updates work?</summary>
+        <p>doxie checks for updates once a day and asks before installing. You can turn this off in Settings.</p>
+      </details>
+      <details>
+        <summary>The download won't open. What now?</summary>
+        <p>If macOS says doxie can't be checked for malicious software, open System Settings → Privacy &amp; Security, scroll down and click <em>Open Anyway</em>. (On macOS 14 you can also right-click <em>doxie</em> in Applications and choose <em>Open</em>.) You only need to do this once. See <a href="docs.html#install">Installing</a>.</p>
+      </details>
+      <details>
+        <summary>Why a dachshund?</summary>
+        <p>Because notes come in all lengths, and so do dachshunds.</p>
+      </details>
+      <p class="more">More answers in the <a href="docs.html">documentation</a>.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 doxie</span>
+    <a href="docs.html">Docs</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="imprint.html">Imprint</a>
+  </footer>
+</body>
+</html>

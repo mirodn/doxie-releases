@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documentation · doxie</title>
+  <meta name="description" content="How to use doxie: capturing notes, tags, quick search, the dog park, Markdown and Obsidian export, Notion, sync between Macs and Doxie Pro.">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="style.css?v=8">
+  <script src="config.js?v=5"></script>
+  <script src="site.js?v=6" defer></script>
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="index.html"><img src="assets/img/icon.png" alt="" width="32" height="32">doxie</a>
+    <nav>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#pro">Pro</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="docs.html">Docs</a>
+      <a class="button small" href="download.html">Download</a>
+    </nav>
+  </header>
+
+  <div class="docs">
+    <aside class="toc">
+      <p class="toc-title">Documentation</p>
+      <ol>
+        <li><a href="#install">Installing</a></li>
+        <li><a href="#capture">Capturing notes</a></li>
+        <li><a href="#reminders">Reminders</a></li>
+        <li><a href="#checklists">Checklists</a></li>
+        <li><a href="#tags">Tags</a></li>
+        <li><a href="#search">Quick search</a></li>
+        <li><a href="#clipboard">Clipboard</a></li>
+        <li><a href="#home">The home page</a></li>
+        <li><a href="#markdown">Markdown and Obsidian</a></li>
+        <li><a href="#notion">Notion</a></li>
+        <li><a href="#sync">Sync between Macs</a></li>
+        <li><a href="#actions">Capture actions</a></li>
+        <li><a href="#designs">Designs and park themes</a></li>
+        <li><a href="#pro">Doxie Pro and your license</a></li>
+        <li><a href="#updates">Updates</a></li>
+        <li><a href="#data">Your data</a></li>
+        <li><a href="#shortcuts">Keyboard shortcuts</a></li>
+        <li><a href="#troubleshooting">Troubleshooting</a></li>
+      </ol>
+    </aside>
+
+    <main class="doc">
+      <h1>Documentation</h1>
+      <p class="lead">doxie is a tiny menu bar app for quick notes. Press a shortcut, type, done. This page explains everything it can do. Features marked <span class="tag">Pro</span> need <a href="index.html#pro">Doxie Pro</a>.</p>
+
+      <section id="install">
+        <h2>Installing</h2>
+        <ol>
+          <li><a href="download.html">Download doxie</a> and open <code>doxie.dmg</code>.</li>
+          <li>Drag <em>doxie</em> to the Applications folder.</li>
+          <li>Open doxie from Applications. A paw 🐾 appears in the menu bar; doxie has no Dock icon.</li>
+        </ol>
+        <p>If macOS says doxie can't be checked for malicious software, click <em>Done</em>, open System Settings → Privacy &amp; Security, scroll down and click <em>Open Anyway</em>. (On macOS 14 you can also right-click <em>doxie</em> in Applications and choose <em>Open</em>.) You only need to do this once.</p>
+        <p>On first launch, a short welcome guide shows how capturing works and lets you pick your shortcut and turn on <em>Launch at login</em>. You can reopen it any time from 🐾 → <em>Welcome Guide</em>.</p>
+        <p class="note">Requires macOS 14 Sonoma or later, on Apple silicon or Intel.</p>
+      </section>
+
+      <section id="capture">
+        <h2>Capturing notes</h2>
+        <p>Press <kbd>⌥</kbd><kbd>Space</kbd> in any app. A pixel dachshund appears, and its body is the text field. It grows as you type, and its tail wags faster while you write.</p>
+        <ul>
+          <li><kbd>⌘</kbd><kbd>S</kbd> saves the note and closes the dachshund. Prefer <kbd>⌘</kbd><kbd>↩</kbd>? Switch it under Settings → <em>Capture</em> → <em>Save a note with</em>.</li>
+          <li><kbd>Esc</kbd> or clicking elsewhere closes it and keeps your draft. The draft survives even quitting doxie, and it's only cleared once the note is saved.</li>
+          <li>The app you were in stays in front, so you can carry on right where you were.</li>
+        </ul>
+        <p>The first line of a note is its title. You can change the shortcut under 🐾 → <em>Settings…</em> → <em>Capture</em>, and also open the dachshund from 🐾 → <em>New Note</em>.</p>
+      </section>
+
+      <section id="reminders">
+        <h2>Reminders</h2>
+        <p>Start a note with <code>/remind</code> and when, then the note:</p>
+        <p><code>/remind tomorrow 9:00 call the vet</code></p>
+        <p>While you type, the time appears under the dachshund, so you can check it before saving. <code>/r</code> works too. doxie understands English and German:</p>
+        <table>
+          <tbody>
+            <tr><td><code>tomorrow</code>, <code>morgen</code></td><td>Tomorrow at 9:00</td></tr>
+            <tr><td><code>tomorrow at 3pm</code>, <code>morgen um 15 Uhr</code></td><td>Tomorrow at 15:00</td></tr>
+            <tr><td><code>in 2 hours</code>, <code>in 30 min</code>, <code>in 3 Tagen</code></td><td>From now</td></tr>
+            <tr><td><code>friday</code>, <code>am Montag um 10</code></td><td>The next Friday or Monday</td></tr>
+            <tr><td><code>18.10.</code>, <code>2026-12-24 18:00</code></td><td>A date</td></tr>
+            <tr><td><code>tonight</code>, <code>heute abend</code>, <code>next week</code></td><td>20:00 today, Monday 9:00</td></tr>
+            <tr><td><code>at 17:00</code>, <code>um 8</code></td><td>The next time it's that time</td></tr>
+          </tbody>
+        </table>
+        <p>A day without a time means 9:00.</p>
+        <p>You can also click the bell 🔔 at the top of an open note (<kbd>⇧</kbd><kbd>⌘</kbd><kbd>R</kbd>), or right-click a note → <em>Remind Me</em>.</p>
+        <h3>When it's time</h3>
+        <ul>
+          <li>The paw 🐾 in the menu bar gets an orange dot, and its menu shows <em>Reminders Due</em>, which opens them.</li>
+          <li>A notification appears with <em>Done</em> and <em>Later</em> (in 10 minutes, in 1 hour, tomorrow). Click it to open the note.</li>
+          <li>The note's dog in the park rings a little bell, and the note shows a highlighted 🔔 badge in the list.</li>
+          <li>The <em>Reminders</em> tab lists every note with a reminder, the next one first.</li>
+        </ul>
+        <p>The first time you set a reminder, macOS asks whether doxie may show notifications. You can check this under Settings → <em>Reminders</em>.</p>
+        <h3>Repeating reminders <span class="tag">Pro</span></h3>
+        <p><code>/remind every monday 8:00 standup</code>, <code>daily 7:30</code>, <code>weekdays 9am</code>, <code>jeden Montag</code>, <code>täglich</code> or <code>monatlich</code>. You can also pick <em>Repeat</em> in the bell's menu. <em>Done</em> moves the reminder to its next time, and <em>Later</em> doesn't change the rhythm.</p>
+      </section>
+
+      <section id="checklists">
+        <h2>Checklists</h2>
+        <p>Write tasks as <code>- [ ] milk</code>, or select some lines in a note and press <kbd>⇧</kbd><kbd>⌘</kbd><kbd>L</kbd> to turn them into a checklist (press it again to turn them back). In the editor every task shows a checkbox: click it to tick the task off, and it's struck through. <kbd>⌘</kbd><kbd>Z</kbd> undoes it.</p>
+        <p>On the home page, a <em>To-dos</em> column beside your notes (above them in a narrow window) collects the open tasks of all your notes, grouped by note. Tick them off right there; a ticked task stays struck through until you close the window, so you can untick it. Click a note's name to open it. The column only appears while some note has tasks.</p>
+        <p>The notes list shows how far along a checklist is, for example ☑ 2/5. With <span class="tag">Pro</span>, <code>/todo</code> in the dachshund turns every line of a new note into a task.</p>
+        <p>The note stays plain Markdown (<code>- [x] milk</code> when done), exactly like Obsidian's tasks.</p>
+      </section>
+
+      <section id="tags">
+        <h2>Tags</h2>
+        <p>Write <code>#work</code>, <code>#idea</code> or nested tags like <code>#work/meeting</code> anywhere in a note. Tags work like in Obsidian:</p>
+        <ul>
+          <li>Upper and lower case don't matter.</li>
+          <li>A tag needs at least one letter, so <code>#42</code> isn't a tag.</li>
+          <li><code># Heading</code> and <code>page#anchor</code> aren't tags.</li>
+          <li>Filtering by <code>#work</code> also shows notes tagged <code>#work/meeting</code>.</li>
+        </ul>
+        <p>Searches can mix words and tags, for example <code>#work invoice</code>.</p>
+        <h3>Tags as folders</h3>
+        <p>On the home page, tags sit in a row below the tabs. Nested tags fold under their parent like folders: click ▸ next to <code>#work</code> to show <code>meeting</code> and <code>ideas</code>. Right-click a tag → <em>Pin Tag</em> to keep it at the front of the row.</p>
+      </section>
+
+      <section id="search">
+        <h2>Quick search</h2>
+        <p>Press <kbd>⌥</kbd><kbd>⇧</kbd><kbd>Space</kbd> from anywhere for a compact list of your notes, newest first. Type words or <code>#tags</code> to filter.</p>
+        <table>
+          <tbody>
+            <tr><td><kbd>↑</kbd> <kbd>↓</kbd></td><td>Move the selection</td></tr>
+            <tr><td><kbd>↩</kbd> or <kbd>⌘</kbd><kbd>C</kbd></td><td>Copy the note and close (double-click works too)</td></tr>
+            <tr><td><kbd>⌘</kbd><kbd>↩</kbd></td><td>Open the note on the home page</td></tr>
+            <tr><td><kbd>Esc</kbd></td><td>Clear the search; press again to close</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="clipboard">
+        <h2>Clipboard</h2>
+        <p>Pasting into the dachshund (<kbd>⌘</kbd><kbd>V</kbd>) inserts plain text. Links stay links, and files copied in Finder paste as their full paths.</p>
+        <p><strong>Save clipboard to inbox</strong> stores whatever you copied as a new note without opening anything. Give it a shortcut under Settings → <em>Capture</em> (it's off by default), or use 🐾 → <em>Save Clipboard to Inbox</em>. The paw briefly shows a checkmark, or an ✕ if the clipboard had no text. Pressing it twice doesn't create a duplicate.</p>
+      </section>
+
+      <section id="home">
+        <h2>The home page</h2>
+        <p>Open it from 🐾 → <em>Open Inbox</em>, or by opening doxie again from Finder or Spotlight.</p>
+        <h3>The dog park</h3>
+        <p>Your ten newest notes play in the park, one dachshund per note. They wander around the pond, gallop, sniff, dig and nap.</p>
+        <ul>
+          <li>Hover a dog to see its note's title, and click it to open the note.</li>
+          <li>Each dog looks like the dachshund did when you wrote its note: same coat, same accessory. Notes written with the plain dog get a coat per first tag, so notes that share a tag look alike.</li>
+          <li>Pinned notes wear a little gold crown, and new notes run in from the edge.</li>
+          <li>While you search or filter, only the matching dogs stay bright.</li>
+          <li>The sign shows your note count and your streak: the days in a row you've written at least one note.</li>
+        </ul>
+        <p>The park only moves while doxie's window is in front, so it costs nothing in the background.</p>
+        <h3>Your notes</h3>
+        <p>Below the park is the list of notes, each with its little dog. Use the tabs to show <em>All</em>, <em>Pinned</em>, <em>Reminders</em>, <em>Archive</em> or a single <code>#tag</code> (click the tag again to go back to All), or search with the field in the toolbar. <em>Show all</em> expands the list.</p>
+        <p>Click a note to edit it; changes are saved as you type. Hover a note for quick buttons to pin, archive or delete it, or right-click it for everything (including copy and reminders). In an open note, the same buttons sit at the top.</p>
+        <ul>
+          <li><strong>Pinned</strong> notes stay on top.</li>
+          <li><strong>Archived</strong> notes leave All, the tags and quick search, but are never deleted. Find them under <em>Archive</em>.</li>
+        </ul>
+      </section>
+
+      <section id="markdown">
+        <h2>Markdown and Obsidian</h2>
+        <p>doxie can write every note as a Markdown file into a folder, for example the inbox folder of your Obsidian vault.</p>
+        <ol>
+          <li>Open Settings → <em>Export Targets</em> → <em>Add Target</em> → <em>Markdown Folder…</em> and pick the folder.</li>
+          <li>New and edited notes are sent automatically (the switch on the right). Use <em>…</em> → <em>Send All Notes Now</em> to export the notes you already have.</li>
+        </ol>
+        <p>Each note becomes <code>YYYY-MM-DD HHmm Title.md</code> with front matter (<code>id</code>, <code>created</code>, <code>updated</code>, <code>source</code>, <code>tags</code>, and <code>remind</code> / <code>repeat</code> for notes with a reminder), which Obsidian reads natively.</p>
+        <h3>Your files are safe</h3>
+        <ul>
+          <li><strong>One file per note.</strong> Renaming a file or changing the note's title never creates a duplicate.</li>
+          <li><strong>Your edits win.</strong> If you changed a file elsewhere, doxie doesn't overwrite it and tells you why under Settings → <em>Sync</em>. Move or delete the file to export the note again.</li>
+          <li><strong>Other files are left alone.</strong> doxie only writes the folder's top level, never subfolders or <code>.obsidian</code>, and never deletes a file, even when you delete the note.</li>
+        </ul>
+        <p>Free includes one Markdown folder for all notes. With <span class="tag">Pro</span> you can add as many targets as you like and give each a tag filter (<em>…</em> → <em>Tag Filter…</em>), for example <code>#work</code> to your work vault and <code>#idea</code> to Notion.</p>
+      </section>
+
+      <section id="notion">
+        <h2>Notion <span class="tag">Pro</span></h2>
+        <ol>
+          <li>Create an <em>internal integration</em> at <a href="https://www.notion.so/my-integrations">notion.so/my-integrations</a> and copy its secret.</li>
+          <li>In Notion, open the database for your notes → <em>•••</em> → <em>Connections</em> → add your integration.</li>
+          <li>In doxie, open Settings → <em>Notion</em>, paste the secret and click <em>Connect</em>. The secret is stored in your Mac's keychain.</li>
+          <li>Under <em>Export Targets</em> → <em>Add Target</em> → <em>Notion Database…</em>, pick the database.</li>
+        </ol>
+        <p>Each note becomes a page. The first line is its title, and the rest becomes Notion blocks: headings, lists, to-dos, quotes and code. To fill in tags and dates, add a multi-select property named <strong>Tags</strong> and a date property named <strong>Created</strong> to the database.</p>
+        <p>doxie sends a note 3 seconds after you stop typing. If you're offline, it tries again later on its own. Pages you edited or deleted in Notion are never overwritten or recreated.</p>
+      </section>
+
+      <section id="sync">
+        <h2>Sync between Macs <span class="tag">Pro</span></h2>
+        <p>Turn on <em>Sync notes between my Macs</em> under Settings → <em>Sync Between Macs</em>, on each Mac. Notes are kept in <strong>iCloud Drive › Doxie Sync</strong>; under <em>Change</em> you can pick another synced folder, such as Dropbox.</p>
+        <ul>
+          <li>Notes from all your Macs are merged. Turning sync on never replaces anything.</li>
+          <li>The latest change wins, for text, pins, archiving and deleting.</li>
+          <li>If the same note was changed on two Macs before they synced, both versions are kept. The second one is a separate note tagged <code>#conflict</code>.</li>
+          <li>Set up export targets on one Mac only, so two Macs don't write the same files.</li>
+        </ul>
+      </section>
+
+      <section id="actions">
+        <h2>Capture actions <span class="tag">Pro</span></h2>
+        <p>Type a command at the start of a note:</p>
+        <table>
+          <tbody>
+            <tr><td><code>/todo</code> or <code>/t</code></td><td>Turns each line into a task</td></tr>
+            <tr><td><code>/pin</code> or <code>/p</code></td><td>Saves the note pinned</td></tr>
+            <tr><td><code>/append</code> or <code>/a</code></td><td>Adds the text to your latest note</td></tr>
+            <tr><td><code>/remind</code> or <code>/r</code></td><td>Sets a <a href="#reminders">reminder</a> (free; repeating ones need Pro)</td></tr>
+          </tbody>
+        </table>
+        <p>Commands combine, for example <code>/pin /todo call the vet</code> or <code>/pin /remind friday pay rent</code>. While you type <code>#ta…</code>, matching tags appear under the dog, and <kbd>Tab</kbd> completes the first one. Without Pro, commands are saved as plain text.</p>
+      </section>
+
+      <section id="designs">
+        <h2>Designs and park themes <span class="tag">Pro</span></h2>
+        <p>Under Settings → <em>Design</em> you can dress up your dachshund:</p>
+        <ul>
+          <li><strong>Coats:</strong> Classic Red, Black &amp; Tan, Dapple, Chocolate, Cream.</li>
+          <li><strong>Accessories:</strong> scarf, party hat, glasses, bow tie, and cowboy hat with boots.</li>
+          <li><strong>Doze off:</strong> the dog falls asleep after 10 seconds without typing.</li>
+          <li><strong>Park &amp; frame:</strong> Meadow (free), Autumn, Snow and Night, each with its own scenery, animations and frame.</li>
+        </ul>
+        <p>Every note remembers the look it was written with, so your park fills up with different dogs. You can try any look in the preview without Pro.</p>
+      </section>
+
+      <section id="pro">
+        <h2>Doxie Pro and your license</h2>
+        <p>Doxie Pro is a one-time purchase for up to 3 Macs, with no subscription. Payment and licensing are handled by Lemon Squeezy.</p>
+        <ol>
+          <li>Buy Doxie Pro on the <a href="index.html#pro">home page</a>. Your license key arrives by email.</li>
+          <li>In doxie, open Settings → <em>Doxie Pro</em>, paste the key under <em>License Key</em> and click <em>Activate</em>.</li>
+        </ol>
+        <ul>
+          <li><strong>Moving to another Mac:</strong> click <em>Deactivate on This Mac</em> to free the activation, then activate on the new Mac.</li>
+          <li><strong>Offline:</strong> doxie checks the license once a day. If it can't reach the server, Pro keeps working for 180 days.</li>
+          <li><strong>Without Pro</strong> nothing is lost: your notes, exports and settings stay. Pro features just pause.</li>
+        </ul>
+      </section>
+
+      <section id="updates">
+        <h2>Updates</h2>
+        <p>doxie checks for updates once a day and asks before installing. You can turn this off under Settings → <em>Updates</em>, and check by hand with 🐾 → <em>Check for Updates…</em>.</p>
+      </section>
+
+      <section id="data">
+        <h2>Your data</h2>
+        <p>Notes are stored on your Mac in <code>~/Library/Application Support/doxie/doxie.sqlite</code>. Settings → <em>Storage</em> → <em>Show in Finder</em> opens the folder. doxie has no account and no servers.</p>
+        <ul>
+          <li><strong>Backups:</strong> Settings → <em>Storage</em> → <em>Export Backup…</em> saves all your notes (archived ones too) in one file. <em>Restore…</em> brings back notes that are missing or were deleted, and never overwrites a newer version or removes anything.</li>
+          <li>Before updating its database to a new format, doxie saves a copy next to it (<code>doxie.sqlite.backup-…</code>).</li>
+          <li>Your Mac's Time Machine backs up the folder like any other.</li>
+          <li>To uninstall, quit doxie and move it to the Trash. To also delete your notes, delete the folder above. This can't be undone.</li>
+        </ul>
+        <p>See the <a href="privacy.html">privacy policy</a> for everything doxie sends over the network.</p>
+      </section>
+
+      <section id="shortcuts">
+        <h2>Keyboard shortcuts</h2>
+        <table>
+          <thead><tr><th>Anywhere</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><kbd>⌥</kbd><kbd>Space</kbd></td><td>New note</td></tr>
+            <tr><td><kbd>⌥</kbd><kbd>⇧</kbd><kbd>Space</kbd></td><td>Quick search</td></tr>
+            <tr><td>your own</td><td>Save clipboard to inbox</td></tr>
+          </tbody>
+          <thead><tr><th>In the dachshund</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><kbd>⌘</kbd><kbd>S</kbd> (or <kbd>⌘</kbd><kbd>↩</kbd>)</td><td>Save and close</td></tr>
+            <tr><td><kbd>Esc</kbd></td><td>Close and keep the draft</td></tr>
+            <tr><td><kbd>Tab</kbd></td><td>Complete a tag <span class="tag">Pro</span></td></tr>
+          </tbody>
+          <thead><tr><th>On the home page</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><kbd>⌘</kbd><kbd>N</kbd></td><td>New note</td></tr>
+            <tr><td><kbd>⇧</kbd><kbd>⌘</kbd><kbd>P</kbd></td><td>Pin or unpin (in the editor)</td></tr>
+            <tr><td><kbd>⌃</kbd><kbd>⌘</kbd><kbd>A</kbd></td><td>Archive or unarchive (in the editor)</td></tr>
+            <tr><td><kbd>⇧</kbd><kbd>⌘</kbd><kbd>R</kbd></td><td>Set or change a reminder (in the editor)</td></tr>
+            <tr><td><kbd>⇧</kbd><kbd>⌘</kbd><kbd>L</kbd></td><td>Turn lines into a checklist, or back (in the editor)</td></tr>
+            <tr><td><kbd>⇧</kbd><kbd>⌘</kbd><kbd>C</kbd></td><td>Copy the note (in the editor)</td></tr>
+            <tr><td><kbd>Esc</kbd></td><td>Close the editor</td></tr>
+          </tbody>
+        </table>
+        <p>The three global shortcuts can be changed under Settings → <em>Capture</em>.</p>
+      </section>
+
+      <section id="troubleshooting">
+        <h2>Troubleshooting</h2>
+        <details>
+          <summary>⌥Space doesn't open the dachshund</summary>
+          <p>Another app may use the same shortcut, such as a launcher or a keyboard tool. Pick a different shortcut under Settings → <em>Capture</em>, and check that the paw 🐾 is in your menu bar (doxie is running).</p>
+        </details>
+        <details>
+          <summary>Reminders don't show up as notifications</summary>
+          <p>Check Settings → <em>Reminders</em>. If notifications are turned off, click <em>Open Notification Settings…</em> and allow doxie. Also check that Focus or Do Not Disturb isn't on. Due reminders always show in the <em>Reminders</em> tab, even without notifications.</p>
+        </details>
+        <details>
+          <summary>A note wasn't exported</summary>
+          <p>Look under Settings → <em>Sync</em>: problems are listed there instead of popping up. Usually the file was edited outside doxie, so doxie left it alone. Move or delete that file and edit the note again.</p>
+        </details>
+        <details>
+          <summary>I see notes tagged #conflict</summary>
+          <p>The same note was changed on two Macs before they synced, so doxie kept both versions. Merge them by hand and delete the one you don't need.</p>
+        </details>
+        <details>
+          <summary>My license key says the activation limit is reached</summary>
+          <p>A key works on 3 Macs at once. On a Mac you no longer use, click <em>Deactivate on This Mac</em> under Settings → <em>Doxie Pro</em>. If that Mac is gone, write to us and we'll reset it.</p>
+        </details>
+        <details>
+          <summary>Something else</summary>
+          <p>Use 🐾 → <em>Send Feedback…</em> or write to <a href="mailto:dumanmiro@gmail.com">dumanmiro@gmail.com</a>. We're happy to help.</p>
+        </details>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <span>© 2026 doxie</span>
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="imprint.html">Imprint</a>
+  </footer>
+</body>
+</html>
