@@ -5,7 +5,7 @@
 **Quick notes, fetched by a dachshund.**
 
 A tiny, local-first note-taking app that lives in your Mac's menu bar.<br>
-Press <kbd>⌥</kbd> <kbd>Space</kbd>, type, press <kbd>⌘</kbd> <kbd>↩</kbd>. Done.
+Press <kbd>⌥</kbd> <kbd>Space</kbd>, type, press <kbd>⌘</kbd> <kbd>S</kbd>. Done.
 
 [![Latest release](https://img.shields.io/github/v/release/mirodn/doxie-releases?include_prereleases&label=release&color=8B5A2B)](https://github.com/mirodn/doxie-releases/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/mirodn/doxie-releases/total?color=8B5A2B)](https://github.com/mirodn/doxie-releases/releases)
@@ -93,7 +93,7 @@ doxie checks for updates once a day and always asks before installing. You can t
 |---|---|
 | <kbd>⌥</kbd> <kbd>Space</kbd> | New note (from any app) |
 | <kbd>⌥</kbd> <kbd>⇧</kbd> <kbd>Space</kbd> | Quick search |
-| <kbd>⌘</kbd> <kbd>↩</kbd> | Save and close |
+| <kbd>⌘</kbd> <kbd>S</kbd> | Save and close |
 | <kbd>Esc</kbd> | Close and keep draft |
 | <kbd>⌘</kbd> <kbd>N</kbd> | New note (home page) |
 | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>P</kbd> | Pin / unpin |
